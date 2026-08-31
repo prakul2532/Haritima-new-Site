@@ -1,0 +1,1085 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #889063;
+    overflow-x: hidden;
+}
+/* =========================
+   HERO / FIRST SCREEN
+   ========================= */
+.fakebox {
+    width: 100%;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #889063;
+    display: flex;
+    animation-name: fakeBoxAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 150px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+#navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.haritimaSymbol {
+    width: 80px;
+    height: 70px;
+    border-radius: 100px;
+    margin: 0;
+    box-shadow: 0 0 50px #4b9960;
+}
+
+.function {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.functions {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontClass {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* LOGIN */
+
+.loginButton {
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #4b9960;
+    background-color: #4b9960;
+    border-radius: 150px;
+}
+
+.ReadMoreButton {
+    width: 120px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #4b9960;
+    background-color: greenyellow;
+    border-radius: 150px;
+}
+
+/* =========================
+   CENTER CONTENT
+   ========================= */
+
+.symbolicText {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.textualStyle {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.haritima {
+    font-size: clamp(70px, 9vw, 143px);
+    font-weight: bolder;
+    margin: 5px auto;
+    color: #63ad4a;
+    text-shadow: 0 0 1px green;
+    font-family: Arial, sans-serif;
+}
+
+.haritima_bottom {
+    font-size: 23px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.hansrajSymbol {
+    width: 240px;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 0 0 100px #4b9960;
+}
+
+
+/* =========================
+   SIGN UP
+   ========================= */
+
+.SignUpContent {
+    width: 40%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SignUp {
+    font-size: 40px;
+    padding: 5px;
+}
+
+.SignUpBox {
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #4b9960;
+    background-color: #4b9960;
+    border-radius: 150px;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   MAIN CONTENT SECTIONS
+   ========================= */
+
+.box {
+    width: 96%;
+    margin: 10vh auto 80px;
+    border: 5px solid #ab8115;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    background-color: #889063;
+    box-shadow: 0 0 100px #63ad4a;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bookmark {
+    text-decoration: none;
+}
+
+.newsBox {
+    border: 2px solid #1f6314;
+    border-radius: 40px;
+    background-color: #1f6314;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 1vw;
+    align-items: center;
+    width: 27vw;
+    height: 50vh;
+}
+
+/* environmental updates section */
+
+.content_Updates {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.EVS_image_1,
+.EVS_image_2,
+.EVS_image_3 {
+    width: 39vw;
+    height: 50vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hierarchy1,
+.hierarchy2,
+.hierarchy3 {
+    display: flex;
+    flex-direction: row;
+    gap: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Updates_alignment {
+    padding: 40px;
+}
+
+.question_box {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid green;
+    margin: 10px;
+    border-radius: 100px;
+    height: 5vh;
+    background-color: green;
+}
+
+.outro_footer {
+    z-index: 2;
+    border: 5px solid #ab8115;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    background-color: #889063;
+    border-bottom: 2px solid #889063;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    margin: 40px;
+}
+
+.footer_Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HTML CSS:- */
+
+.header {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #cfbb99;
+    width: 100%;
+    margin: 5px auto;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    opacity: 0;
+}
+
+.mainContentAlign {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 30px;
+    opacity: 1;
+}
+
+.image1 {
+    width: 40vw;
+    height: 90vh;
+    border-radius: 10px;
+    border: 2px solid white;
+    opacity: 0;
+}
+
+.image2 {
+    width: 39vw;
+    height: 45vh;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.newsAlignment {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+.image3,
+.image4,
+.image5 {
+    width: 25vw;
+    height: 25vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 2vw;
+}
+
+/* js classes styling */
+
+.reversal {
+    animation: reverseDown 2s ease-in-out 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes reverseDown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(70px);
+        transition: ease-in-out;
+    }
+}
+
+/* animations */
+
+@keyframes fakeBoxAnimation {
+    0% {
+        transform: translateY(70px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        transform: translateY(0px);
+        transition: ease-in-out;
+    }
+}
+
+.loginAnimation {
+    animation-name: LoginAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.textAnimation {
+    animation-name: TextAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.missionAnimation {
+    animation-name: missionAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.missionImageAnimation {
+    animation-name: missionImageAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.articlesAnimation {
+    animation-name: articlesAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.updatesAnimation {
+    animation-name: updatesAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.updatesImageAnimation {
+    animation-name: updatesImageAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.updatesReverseAnimation {
+    animation-name: updatesReverseAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.updatesReverseImageAnimation {
+    animation-name: updatesReverseImageAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes LoginAnimation {
+    0% {
+        background-color: darkgreen;
+        box-shadow: 0px 0px 50px darkgreen;
+    }
+
+    20% {
+        background-color: #4c3d19;
+        box-shadow: 0px 0px 50px #4c3d19;
+    }
+
+    40% {
+        background-color: rgb(18, 65, 18);
+        box-shadow: 0px 0px 50px rgb(18, 65, 18);
+    }
+
+    60% {
+        background-color: #4c3d19;
+        box-shadow: 0px 0px 50px #4c3d19;
+    }
+
+    80% {
+        background-color: rgb(46, 97, 46);
+        box-shadow: 0px 0px 50px rgb(46, 97, 46);
+    }
+
+    100% {
+        background-color: darkgreen;
+        box-shadow: 0px 0px 50px darkgreen;
+    }
+}
+
+@keyframes TextAnimation {
+    0% {
+        text-shadow: 0px 0px 1px darkgreen;
+    }
+
+    20% {
+        text-shadow: 10px 10px 1px #4c3d19;
+    }
+
+    40% {
+        text-shadow: -10px -10px 1px rgb(18, 65, 18);
+    }
+
+    60% {
+        text-shadow: 20px 20px 1px #4c3d19;
+    }
+
+    80% {
+        text-shadow: -20px -20px 1px rgb(46, 97, 46);
+    }
+
+    100% {
+        text-shadow: 0px 0px 1px darkgreen;
+    }
+}
+
+@keyframes missionAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes missionImageAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes articlesAnimation {
+    0% {
+        transform: translateY(120px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        transform: translateY(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes updatesAnimation {
+    0% {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(90px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes updatesImageAnimation {
+    0% {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(-90px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes updatesReverseAnimation {
+    0% {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(-90px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes updatesReverseImageAnimation {
+    0% {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(90px);
+        transition: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(0px);
+        transition: ease-in-out;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE OPTIMIZATION LAYER
+   Keeps the existing elements, colors and animations while
+   making sizing/spacing adapt to phones, tablets and desktops.
+   ========================================================= */
+
+/* Prevent flex/grid children from forcing horizontal overflow */
+#navBar,
+.function,
+.functions,
+.symbolicText,
+.SignUpContent,
+.mainContentAlign,
+.newsAlignment,
+.hierarchy1,
+.hierarchy2,
+.footer_content {
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .symbolicText {
+        max-width: 1400px;
+    }
+
+    .SignUpContent {
+        max-width: 650px;
+    }
+
+    .newsAlignment {
+        max-width: 1400px;
+    }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    #navBar {
+        padding: 16px 24px;
+    }
+
+    .haritimaSymbol {
+        width: 68px;
+        height: 60px;
+    }
+
+    .function {
+        margin-left: 24px;
+    }
+
+    .functions {
+        gap: 24px;
+    }
+
+    .symbolicText {
+        width: 92%;
+        gap: 30px;
+    }
+
+    .textualStyle {
+        padding: 20px;
+    }
+
+    .haritima {
+        font-size: clamp(56px, 10vw, 100px);
+    }
+
+    .haritima_bottom {
+        font-size: clamp(17px, 2.2vw, 23px);
+    }
+
+    .hansrajSymbol {
+        width: min(240px, 30vw);
+        height: auto;
+    }
+
+    .SignUpContent {
+        width: min(60%, 600px);
+    }
+
+    .box {
+        width: 94%;
+    }
+
+    .newsBox {
+        width: 30vw;
+        min-width: 240px;
+        height: 42vh;
+    }
+
+    .hierarchy1,
+    .hierarchy2,
+    .hierarchy3 {
+        gap: 6vw;
+    }
+
+    .Updates_alignment {
+        padding: 24px;
+    }
+
+    .mainContentAlign {
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .image1 {
+        width: 42vw;
+        height: 70vh;
+    }
+
+    .image2 {
+        width: 40vw;
+        height: 38vh;
+    }
+
+    .image3,
+    .image4,
+    .image5 {
+        width: 26vw;
+        height: 22vh;
+        margin: 1.5vw;
+    }
+
+    .footer_content {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin: 30px;
+    }
+
+    .header {
+        font-size: clamp(28px, 4vw, 42px);
+    }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+    .fakebox {
+        min-height: 100svh;
+        padding-bottom: 60px;
+    }
+
+    #navBar {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .haritimaSymbol {
+        width: 54px;
+        height: 48px;
+        flex: 0 0 auto;
+    }
+
+    .function {
+        width: calc(100% - 66px);
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .functions {
+        gap: clamp(10px, 3vw, 20px);
+        flex-wrap: wrap;
+    }
+
+    .fontClass {
+        font-size: clamp(13px, 3.5vw, 16px);
+    }
+
+    .loginButton {
+        width: 78px;
+        height: 30px;
+        margin: 5px;
+        flex: 0 0 auto;
+    }
+
+    .symbolicText {
+        width: 100%;
+        flex-direction: column;
+        gap: 18px;
+        padding: 14px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .textualStyle {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .haritima {
+        font-size: clamp(48px, 17vw, 82px);
+        line-height: 0.95;
+        overflow-wrap: anywhere;
+    }
+
+    .haritima_bottom {
+        font-size: clamp(15px, 4vw, 20px);
+        line-height: 1.35;
+    }
+
+    .hansrajSymbol {
+        width: min(190px, 55vw);
+        height: auto;
+    }
+
+    .SignUpContent {
+        width: min(92%, 500px);
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .SignUp {
+        font-size: clamp(26px, 8vw, 40px);
+    }
+
+    .SignUpBox {
+        width: 82px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .ReadMoreButton {
+        width: 110px;
+        height: 34px;
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .box {
+        width: 94%;
+        margin: 6vh auto 50px;
+        border-width: 3px;
+        border-radius: 22px;
+        padding: 8px;
+    }
+
+    .newsBox {
+        width: min(90vw, 360px);
+        min-width: 0;
+        height: auto;
+        min-height: 240px;
+        padding: 16px;
+        border-radius: 28px;
+    }
+
+    .content_Updates {
+        width: 100%;
+    }
+
+    .EVS_image_1,
+    .EVS_image_2,
+    .EVS_image_3 {
+        width: min(90vw, 500px);
+        height: auto;
+        min-height: 220px;
+        object-fit: cover;
+    }
+
+    .hierarchy1,
+    .hierarchy2,
+    .hierarchy3 {
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .Updates_alignment {
+        padding: 14px;
+    }
+
+    .question_box {
+        height: auto;
+        min-height: 44px;
+        margin: 8px 4px;
+        padding: 10px 16px;
+        border-radius: 28px;
+        gap: 12px;
+    }
+
+    .outro_footer {
+        border-width: 3px;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        gap: 28px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 24px 12px;
+    }
+
+    .footer_Content {
+        width: 100%;
+    }
+
+    .header {
+        font-size: clamp(24px, 7vw, 36px);
+        line-height: 1.15;
+    }
+
+    .mainContent {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .mainContentAlign {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .image1,
+    .image2 {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: cover;
+    }
+
+    .newsAlignment {
+        flex-direction: column;
+        width: 100%;
+        margin: 24px auto;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .image3,
+    .image4,
+    .image5 {
+        width: min(88vw, 420px);
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        margin: 0;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+    #navBar {
+        padding: 10px 12px;
+    }
+
+    .haritimaSymbol {
+        width: 46px;
+        height: 42px;
+    }
+
+    .function {
+        width: calc(100% - 56px);
+    }
+
+    .functions {
+        gap: 8px;
+    }
+
+    .fontClass {
+        font-size: 12px;
+    }
+
+    .loginButton {
+        width: 68px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .symbolicText {
+        padding: 8px;
+    }
+
+    .haritima {
+        font-size: clamp(42px, 16vw, 64px);
+    }
+
+    .hansrajSymbol {
+        width: min(165px, 50vw);
+    }
+
+    .box {
+        width: 92%;
+        margin-top: 4vh;
+    }
+
+    .mainContent,
+    .mainContentAlign {
+        padding: 12px;
+    }
+
+    .Updates_alignment {
+        padding: 10px;
+    }
+
+    .question_box {
+        padding: 8px 12px;
+    }
+}
+
+/* Landscape phones: preserve the horizontal hero where possible */
+@media (max-width: 767px) and (orientation: landscape) {
+    .fakebox {
+        min-height: 100svh;
+    }
+
+    .symbolicText {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .textualStyle {
+        align-items: flex-start;
+    }
+
+    .hansrajSymbol {
+        width: min(180px, 28vw);
+    }
+
+    .haritima {
+        font-size: clamp(42px, 10vw, 72px);
+    }
+
+    .mainContentAlign {
+        flex-direction: row;
+    }
+
+    .image1 {
+        width: 45%;
+        max-height: 65vh;
+    }
+
+    .image2 {
+        width: 45%;
+        max-height: 50vh;
+    }
+}
+
+/* Accessibility: preserve layout while respecting reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
