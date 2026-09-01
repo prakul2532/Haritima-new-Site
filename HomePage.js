@@ -58,3 +58,36 @@ window.addEventListener("scroll",function(){
         third_update_image.classList.remove("updatesImageAnimation")
     }
 })
+let colorTransit = document.querySelector(".circularBox")
+let positionTransit = document.querySelector(".boxColorPallete")
+let originalBox = document.querySelector(".fakebox")
+let isChanged = false;
+function changeBackground() {
+    if (isChanged === false){
+        colorTransit.classList.add("colorTransition");
+        positionTransit.classList.add("shiftedCircularBox");
+        document.body.style.backgroundColor = "#CFBB99";
+        originalBox.style.backgroundColor = "#CFBB99";
+        document.querySelectorAll(".box").forEach(function(box){
+            box.style.backgroundColor = "#CFBB99";
+        })
+        document.querySelectorAll(".header").forEach(function(header){
+            header.style.color = "#889063";
+        })
+        document.querySelector(".outro_footer").style.backgroundColor = "#CFBB99";
+        isChanged = true;
+    } else {
+        colorTransit.classList.remove("colorTransition");
+        positionTransit.classList.remove("shiftedCircularBox");
+        document.body.style.backgroundColor = "#889063";
+        originalBox.style.backgroundColor = "#889063";
+        document.querySelectorAll(".box").forEach(function(box){
+            box.style.backgroundColor = "#889063";
+        })
+        document.querySelectorAll(".header").forEach(function(header){
+            header.style.color = "#CFBB99";
+        })
+        document.querySelector(".outro_footer").style.backgroundColor = "#889063";
+        isChanged = false;
+    }
+}

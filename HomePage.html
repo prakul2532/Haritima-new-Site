@@ -6,6 +6,45 @@
     <link rel="stylesheet" href="HomePage.css">
     <link rel="shortcut icon" href="static/Symbol.png" type="image/x-icon">
     <title>Haritima</title>
+    <style>
+        .boxColorPallete{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 6vw;
+            height: 5vh;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 20vw;
+            background-color: rgba(255, 255, 255, 0.188);
+            box-shadow: 0px 0px 10px green;
+        }
+        .circularBox{
+            width: 2vw;
+            height: 4vh;
+            background-color: #889063;
+            border: 1px solid black;
+            border-radius: 20vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shiftedCircularBox{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            transition: ease-in-out;
+            width: 6vw;
+            height: 5vh;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 20vw;
+        }
+        .colorTransition{
+            background-color: #CFBB99;
+        }
+    </style>
 </head>
 <body>
     <div class="fakebox">
@@ -19,6 +58,9 @@
                     <a href="#articles" class="bookmark"><p class="fontClass">ARTICLES</p></a>
                     <a href="#updates" class="bookmark"><p class="fontClass">UPDATES</p></a>
                     <a href="#faq" class="bookmark"><p class="fontClass">FAQ</p></a>
+                </div>
+                <div class="boxColorPallete">
+                    <div class="circularBox" onclick="changeBackground()"><p style="cursor: pointer;">H</p></div>
                 </div>
                 <!-- login button -->
                 <div class="loginButton loginAnimation">
