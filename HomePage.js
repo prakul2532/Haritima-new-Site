@@ -91,3 +91,52 @@ function changeBackground() {
         isChanged = false;
     }
 }
+let quest1 = document.querySelector(".question1")
+let quest2 = document.querySelector(".question2")
+let quest3 = document.querySelector(".question3")
+let quest4 = document.querySelector(".question4")
+isChanged = false
+function question_opening1(){
+    if (isChanged === false) {
+        quest1.style.display = "flex";
+        quest1.classList.add(".animation_Faq_Box");
+        isChanged = true 
+    } else {
+        quest1.style.display = "none";
+        quest1.classList.remove(".animation_Faq_Box");
+        isChanged = false
+    }
+}
+function question_opening2(){
+    if (isChanged === false) {
+        quest2.style.display = "flex";
+        quest2.classList.add(".animation_Faq_Box");
+        isChanged = true 
+    } else {
+        quest2.style.display = "none";
+        quest2.classList.remove(".animation_Faq_Box");
+        isChanged = false
+    }
+}
+function question_opening3(){
+    if (isChanged === false) {
+        quest3.style.display = "flex";
+        quest3.classList.add(".animation_Faq_Box");
+        isChanged = true 
+    } else {
+        quest3.style.display = "none";
+        quest3.classList.remove(".animation_Faq_Box");
+        isChanged = false
+    }
+}
+function question_opening4(){
+    if (isChanged === false) {
+        quest4.style.display = "flex";
+        quest4.classList.add(".animation_Faq_Box");
+        isChanged = true 
+    } else {
+        quest4.style.display = "none";
+        quest4.classList.remove(".animation_Faq_Box");
+        isChanged = false
+    }
+}

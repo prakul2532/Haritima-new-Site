@@ -7,42 +7,48 @@
     <link rel="shortcut icon" href="static/Symbol.png" type="image/x-icon">
     <title>Haritima</title>
     <style>
-        .boxColorPallete{
+        .box_Faq{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 4vw;
-            height: 3vh;
-            padding: 7px;
-            border: 1px solid black;
-            border-radius: 20vw;
-            background-color: rgba(255, 255, 255, 0.188);
-            box-shadow: 0px 0px 10px green;
+            flex-direction: column;
+            width: 98%;
+            margin: 20px auto;
         }
-        .circularBox{
-            width: 1vw;
-            height: 2vh;
-            background-color: #889063;
-            border: 1px solid black;
-            border-radius: 20vw;
+        .Faq_font{
+            font-size: 2vw;
+        }
+        .fontBoxFaq{
+            width: 99%;
+            margin: auto;
+            background-color: green;
+            border: 1px solid green;
+            border-radius: 30px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 15px;
+            height: 11vh;
+            display: none;
         }
-        .shiftedCircularBox{
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: space-between;
-            transition: ease-in-out;
-            width: 4vw;
-            height: 3vh;
-            padding: 7px;
-            border: 1px solid black;
-            border-radius: 20vw;
+        .question_box:hover{
+            background-color: lightgreen;
         }
-        .colorTransition{
-            background-color: #CFBB99;
+        .question_box{
+            cursor: pointer;
+        }
+        .Read_hover:hover{
+            background-color: rgb(74, 246, 0);
+        }
+        .animation_Faq_Box{
+            animation: Faq_Animate 5s ease-in-out 1;
+        }
+        @keyframes Faq_Animate{
+            0%{transform: translateY(20px);
+            opacity: 1;}
+            50%{transform: translateY(10px);
+            opacity: 1;}
+            100%{transform: translateY(0px);
+            opacity: 1;}
         }
     </style>
 </head>
@@ -101,21 +107,21 @@
             <div class="newsBox">
                 <img src="static/NEWS1.png" class="image3" alt="errorLoading">
                 <p class="fontClass">Rise in energy demand of INDIA</p>
-                <div class="ReadMoreButton">
+                <div class="ReadMoreButton Read_hover">
                     <a href="news_1.html" class="fontClass" style="color:black;">READ MORE</a>
                 </div>
             </div>
             <div class="newsBox">
                 <img src="static/NEWS2.png" class="image4" alt="errorLoading">
                 <p class="fontClass">Environmental Inequlity</p>
-                <div class="ReadMoreButton">
+                <div class="ReadMoreButton Read_hover">
                     <a href="news_2.html" class="fontClass" style="color: black;">READ MORE</a>
                 </div>
             </div>
             <div class="newsBox">
                 <img src="static/NEWS3.png" class="image5" alt="errorLoading">
                 <p class="fontClass">The Impact of Rising Population on the Environment: Is Population Growth a Boon or a Bane?</p>
-                <div class="ReadMoreButton">
+                <div class="ReadMoreButton Read_hover">
                     <a href="new_3.html" class="fontClass" style="color: black;">READ MORE</a>
                 </div>
             </div>
@@ -156,21 +162,49 @@
     <div class="box" id="faq">
         <p class="fontClass header">FAQ'S</p>
         <div class="contentAnimation">
-            <div class="question_box">
-                <p class="fontClass" style="font-size: 20px;">Why is Sustainability So Important for the Future?</p>
-                <p class="fontClass" style="font-size: 20px;">+</p>
+            <div class="box_Faq " onclick="question_opening1()">
+                <!-- question -->
+                <div class="question_box">
+                    <p class="fontClass" style="font-size: 20px;">Why is Sustainability So Important for the Future?</p>
+                    <p class="fontClass" style="font-size: 20px;">+</p>
+                </div>
+                <!-- answers -->
+                <div class="fontBoxFaq question1">
+                    <p class="fontClass Faq_font">Sustainability is crucial for ensuring a healthy planet for future generations. It involves responsible resource management  and reducing environmental impact.</p>
+                </div>
             </div>
-            <div class="question_box">
-                <p class="fontClass" style="font-size: 20px;">How Can I Effectively Reduce Plastic Use?</p>
-                <p class="fontClass" style="font-size: 20px;">+</p>
+            <div class="box_Faq " onclick="question_opening2()">
+                <!-- question -->
+                <div class="question_box">
+                    <p class="fontClass" style="font-size: 20px;">How Can I Effectively Reduce Plastic Use?</p>
+                    <p class="fontClass" style="font-size: 20px;">+</p>
+                </div>
+                <!-- answers -->
+                <div class="fontBoxFaq question2">
+                    <p class="fontClass Faq_font">Reducing single-use plastics and opting for reusable alternatives are effective ways to minimize plastic waste and protect the environment for the long term.</p>
+                </div>
             </div>
-            <div class="question_box">
-                <p class="fontClass" style="font-size: 20px;">How Does Deforestation Affect the Environment?</p>
-                <p class="fontClass" style="font-size: 20px;">+</p>
+            <div class="box_Faq " onclick="question_opening3()">
+                <!-- question -->
+                <div class="question_box">
+                    <p class="fontClass" style="font-size: 20px;">How Does Deforestation Affect the Environment?</p>
+                    <p class="fontClass" style="font-size: 20px;">+</p>
+                </div>
+                <!-- answers -->
+                <div class="fontBoxFaq question3">
+                    <p class="fontClass Faq_font">Deforestation leads to habitat loss, biodiversity decline, soil erosion, and significantly contributes to climate change by releasing stored carbon into the atmosphere.</p>
+                </div>
             </div>
-            <div class="question_box">
-                <p class="fontClass" style="font-size: 20px;">How can I help protect the environment?</p>
-                <p class="fontClass" style="font-size: 20px;">+</p>
+            <div class="box_Faq " onclick="question_opening4()">
+                <!-- question -->
+                <div class="question_box">
+                    <p class="fontClass" style="font-size: 20px;">How can I help protect the environment?</p>
+                    <p class="fontClass" style="font-size: 20px;">+</p>
+                </div>
+                <!-- answers -->
+                <div class="fontBoxFaq question4">
+                    <p class="fontClass Faq_font">Individual actions like reducing waste, supporting eco-friendly businesses, and advocating for policies can significantly impact protection.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -189,8 +223,8 @@
             <a href="HomePage.html" class="fontClass" style="font-size: 20px;font-family: cursive;">Home</a>
         </div>
         <div class="footer_Content">
-            <p class="fontClass" style="font-size: 11px;font-family: cursive; color: black;">Haritima , The Environmental Awareness society of Hansraj College</p>
-            <p class="fontClass" style="font-size: 11px;font-family: cursive;color: black;">Copyright ©️ 2026 . All rights Reserved</p>
+            <p class="fontClass" style="font-size: 11px;color: black;">Haritima , The Environmental Awareness society of Hansraj College</p>
+            <p class="fontClass" style="font-size: 11px;color: black;">Copyright ©️ 2026 . All rights Reserved</p>
         </div>
     </div>
     <script src="HomePage.js"></script>
