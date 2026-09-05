@@ -665,6 +665,69 @@ body {
     background-color: #CFBB99;
 }
 
+/* improved animation of Faq and footer */
+.box_Faq{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin: 20px auto;
+}
+.Faq_font{
+    font-size: 2vw;
+}
+.fontBoxFaq{
+    width: 99%;
+    margin: auto;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 11vh;
+    display: none;
+}
+.question_box:hover{
+    background-color: lightgreen;
+}
+.question_box{
+    cursor: pointer;
+}
+.Read_hover:hover{
+    background-color: rgb(74, 246, 0);
+    cursor: pointer;
+}
+.readButton:hover{
+    cursor: pointer;
+}
+.animation_Faq_Box{
+    animation: Faq_Animate 1s ease-in-out 1;
+    transition: ease-in-out;
+}
+@keyframes Faq_Animate{
+    0%{transform: translateY(40px);
+                opacity: 0;}
+    25%{transform: translateY(30px);
+                opacity: 0.2;}
+    50%{transform: translateY(20px);
+                opacity: 0.5;}
+    75%{transform: translateY(10px);
+                opacity: 0.7;}
+    100%{transform: translateY(0px);
+                opacity: 1;}
+}
+.footer_alignment{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.H_align{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
 /* =========================================================
    RESPONSIVE OPTIMIZATION LAYER
