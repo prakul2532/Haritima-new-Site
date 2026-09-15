@@ -76,6 +76,7 @@ function changeBackground() {
         })
         document.querySelector(".outro_footer").style.backgroundColor = "#CFBB99";
         isChanged = true;
+        localStorage.setItem("bodyColor","#CFBB99");
     } else {
         colorTransit.classList.remove("colorTransition");
         positionTransit.classList.remove("shiftedCircularBox");
@@ -89,6 +90,7 @@ function changeBackground() {
         })
         document.querySelector(".outro_footer").style.backgroundColor = "#889063";
         isChanged = false;
+        localStorage.setItem("bodyColor","#889063");
     }
 }
 let quest1 = document.querySelector(".question1")

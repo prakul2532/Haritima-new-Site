@@ -1,0 +1,35 @@
+*{
+    color: white;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height:30vh;
+    gap: 10px;
+    padding: 30px;
+}
+.pageAlignment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formSize{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imageSignUp{
+    width: 50vw;
+    height: 98vh;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 60px black;
+}
+.formAlignment{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
