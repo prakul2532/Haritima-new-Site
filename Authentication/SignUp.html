@@ -5,30 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SignUp.css">
     <title>Sign-Up</title>
+    <style>
+        input{
+            font-size: 18px;
+        }
+        .legendFont{
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 20px;
+            color: white;
+            margin-left: 60px;
+        }
+        .fieldsetStyling{
+            border: 5px solid #63ad4a;
+            border-radius: 20px;
+        }
+        .labelStyling{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .loginLink{
+            color: blue;
+            text-decoration-line: underline;
+            cursor: pointer;
+        }
+        .boxStyling{
+            width: 40vw;
+            height: 3vh;
+            border: 2px solid green;
+            background: yellowgreen;
+            border-radius: 10px;
+            padding-left: 20px;
+        }
+        .boxStyling::placeholder{
+            font-size: 18px;
+            padding-left: 50px;
+        }
+        .submitButtonStyling{
+            width: 5vw;
+            height: 4vh;
+            border: 2px solid green;
+            border-radius: 40px;
+            background: yellowgreen;
+        }
+        .formAlignment{
+            animation-name: formTransition;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-duration: 3s;
+            position: relative;
+        }
+        @keyframes formTransition {
+            from{transform: translateY(50px);
+            opacity: 0;}
+            to{transform: translateY(0px);
+            opacity: 1;}
+        }
+        .DisperSign{
+            animation-name: disperSign;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+        @keyframes disperSign {
+            from{transform: translateY(0px);
+            opacity: 1;}
+            to{transform: translateY(50px);
+            opacity: 0;}
+        }
+        .formAlignment2{
+            animation-name: formTransition;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-duration: 3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 40px;
+            display: none;
+        }
+        .showLoginForm{
+            display: flex;
+        }
+        .DisperLogin{
+            animation-name: disperLogin;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+        @keyframes disperLogin {
+            from{transform: translateY(0px);
+            opacity: 1;}
+            to{transform: translateY(50px);
+            opacity: 0;}
+        }
+    </style>
 </head>
 <body>
     <!-- whole body box -->
     <div class="pageAlignment">
         <div class="formAlignment">
             <form action="">
-                <fieldset>
-                    <legend>SIGN UP</legend>
+                <fieldset class="fieldsetStyling">
+                    <legend class="legendFont">SIGN UP</legend>
                     <div class="formSize">
                         <div class="form">
-                            <label for="username">USERNAME</label>
-                            <input type="text" id="username" placeholder="Type a username for yourself">
-                            <label for="password">PASSWORD</label>
-                            <input type="password" id="password" placeholder="Type a strong password">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" placeholder="Type your email id">
+                            <label for="username" class="labelStyling">USERNAME</label>
+                            <input type="text" id="username" class="boxStyling" placeholder="Type a username for yourself">
+                            <label for="password" class="labelStyling">PASSWORD</label>
+                            <input type="text" id="password" class="boxStyling" placeholder="Type a strong password">
+                            <label for="email" class="labelStyling">Email</label>
+                            <input type="text" id="email" class="boxStyling" placeholder="Type your email id">
+                            <p onclick="FormChange()" class="loginLink">have an account? login through it</p>
                         </div>
-                        <input type="submit" value="submit">
+                        <input type="submit" class="submitButtonStyling" value="submit">
                     </div>
                 </fieldset>
             </form>
         </div>
         <div class="imageSignUpAlignment">
             <img src="../static/image_SignUP.png" class="imageSignUp" alt="errorLoading">
+        </div>
+        <div class="formAlignment2">
+            <form action="">
+                <fieldset class="fieldsetStyling">
+                    <legend class="legendFont">LOGIN</legend>
+                    <div class="formSize">
+                        <div class="form">
+                            <label for="username" class="labelStyling">USERNAME</label>
+                            <input type="text" class="boxStyling" name="username" id="username" placeholder="Type your username">
+                            <label for="password" class="labelStyling">PASSWORD</label>
+                            <input type="password" class="boxStyling" name="password" id="password" placeholder="Type your password">
+                            <p onclick="FormChange2()" class="loginLink">new user ? let's sign up</p>
+                        </div>
+                        <input type="submit" class="submitButtonStyling" value="SUBMIT">
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
     <script src="SignUp.js"></script>
