@@ -35,3 +35,97 @@
     align-items: center;
     margin: 40px;
 }
+input{
+    font-size: 18px;
+}
+.legendFont{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+    color: white;
+    margin-left: 60px;
+}
+.fieldsetStyling{
+    border: 5px solid #63ad4a;
+    border-radius: 20px;
+}
+.labelStyling{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.loginLink{
+    color: blue;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.boxStyling{
+    width: 40vw;
+    height: 3vh;
+    border: 2px solid green;
+    background: yellowgreen;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.boxStyling::placeholder{
+    font-size: 18px;
+    padding-left: 50px;
+}
+.submitButtonStyling{
+    width: 5vw;
+    height: 4vh;
+    border: 2px solid green;
+    border-radius: 40px;
+    background: yellowgreen;
+}
+.formAlignment{
+    animation-name: formTransition;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes formTransition {
+    from{transform: translateY(50px);
+    opacity: 0;}
+    to{transform: translateY(0px);
+    opacity: 1;}
+}
+.DisperSign{
+    animation-name: disperSign;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes disperSign {
+    from{transform: translateY(0px);
+    opacity: 1;}
+    to{transform: translateY(50px);
+    opacity: 0;}
+}
+.formAlignment2{
+    animation-name: formTransition;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    display: none;
+}
+.showLoginForm{
+    display: flex;
+}
+.DisperLogin{
+    animation-name: disperLogin;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes disperLogin {
+    from{transform: translateY(0px);
+    opacity: 1;}
+    to{transform: translateY(50px);
+    opacity: 0;}
+}
